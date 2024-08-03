@@ -3,7 +3,7 @@ import {globalStyles} from '../../../config/theme/global-styles';
 import {usePermissionStore} from '../../store/permission/usePermissionStore';
 
 export const PermissionsScreen = () => {
-  const {permissionStatus, requestLocationPermission} = usePermissionStore();
+  const {locationStatus, requestLocationPermission} = usePermissionStore();
 
   return (
     <View style={styles.container}>
@@ -15,7 +15,7 @@ export const PermissionsScreen = () => {
         <Text style={styles.text}>Habilitar localización</Text>
       </Pressable>
 
-      <Text>Estado actual: {permissionStatus}</Text>
+      <Text>Estado actual: {locationStatus}</Text>
     </View>
   );
 };
